@@ -9,6 +9,7 @@ function PokemonCard({ pokemon }) {
           src={pokemon.sprites.other["official-artwork"].front_default}
           alt={pokemon.name}
           className="pokemon-image"
+          loading="lazy"
         />
       </div>
       <div className="pokemon-info">
