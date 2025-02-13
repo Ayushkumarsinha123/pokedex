@@ -4,11 +4,10 @@ import { getAllPokemon, searchPokemon } from "../service/spi";
 
 function Home() {
 
-
   const [pokemonList, setPokemonList] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchedPokemon, setSearchedPokemon] = useState(null);
-  const [error , setError] = useState(null)
+  const [error , setError] = useState(null);
 
   useEffect(() => {
     getAllPokemon().then(setPokemonList)

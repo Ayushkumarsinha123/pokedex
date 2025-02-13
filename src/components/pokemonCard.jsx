@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function PokemonCard({ pokemon }) {
   return (
-    <div className="Cards">
+    <Link to={`/pokemon/${pokemon.name}`} className="Cards">
       <div className="pokemon-poster" title={pokemon.name}>
         <img
           src={pokemon.sprites.other["official-artwork"].front_default}
@@ -14,7 +15,7 @@ function PokemonCard({ pokemon }) {
         <h3>{pokemon.name.toUpperCase()}</h3>
         <p>Type: {pokemon.types.map((t) => t.type.name).join(", ")}</p>
       </div>
-    </div>
+    </Link>
   );
 }
 
